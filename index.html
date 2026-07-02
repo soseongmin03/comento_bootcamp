@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>So Seong Min | 자기소개 페이지</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
+  <div class="page">
+
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="#home" class="logo">So Seong Min</a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+        <label for="menu-toggle" class="menu-button" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <ul class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <label for="theme-toggle" class="theme-button">Theme</label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">즐겁게 노력하는 개발자</p>
+          <h1>안녕하세요.<br />개발자 <strong>소성민</strong>입니다.</h1>
+          <p class="hero-desc">
+            할 일을 스스로 찾고, 실패해도 원인을 끝까지 파고들며,
+            팀과 꾸준히 소통하며 성장하는 개발자를 목표로 하고 있습니다.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="primary-btn">연락하기</a>
+            <a href="https://github.com/soseongmin03" target="_blank" class="secondary-btn">Github 보기</a>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-image">SSM</div>
+          <h2>So Seong Min</h2>
+          <p>Spring Boot Challenger</p>
+          <div class="tag-list">
+            <span>Spring Boot</span>
+            <span>Backend</span>
+            <span>AI Collaboration</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-title">
+          <p>About Me</p>
+          <h2>저는 이런 개발자입니다</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>스스로 찾는 태도</h3>
+            <p>맡은 일이 끝나도 더 할 일이 없는지 찾고 질문하며 더 나은 결과를 만들기 위해 움직입니다.</p>
+          </article>
+
+          <article class="about-card">
+            <h3>문제 해결 끈기</h3>
+            <p>실패해도 좌절하지 않고 원인을 끝까지 찾아 해결하며 결과로 증명하려고 노력합니다.</p>
+          </article>
+
+          <article class="about-card">
+            <h3>소통과 공유</h3>
+            <p>완성도 높은 결과물을 위해 같은 파트, 다른 파트 인원들과 계속 소통하고 과정을 공유합니다.</p>
+          </article>
+
+          <article class="about-card">
+            <h3>빠른 피드백 수용</h3>
+            <p>피드백을 빠르게 받고 적극적으로 반영하며 더 좋은 개발자로 성장하고 있습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="activities" class="section activities-section">
+        <div class="section-title">
+          <p>My Activities</p>
+          <h2>주요 활동</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="date">2021.03 ~ 현재</span>
+            <h3>안양대학교 컴퓨터공학과 재학</h3>
+            <p>컴퓨터공학을 전공하며 개발 기초와 백엔드 역량을 쌓고 있습니다.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="date">2026.03 ~ 2026.06</span>
+            <h3>UMC 10기 Spring Boot Challenger 스터디장</h3>
+            <p>Spring Boot 학습을 이끌며 함께 성장하는 협업 경험을 쌓았습니다.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="date">Currently</span>
+            <h3>AI 협업 사용법 학습</h3>
+            <p>AI를 개발 과정에 효과적으로 활용하는 방법에 관심을 가지고 공부하고 있습니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-title">
+          <p>Contact</p>
+          <h2>연락처 및 링크</h2>
+        </div>
+
+        <div class="contact-grid">
+          <a href="mailto:sosungmin03@naver.com" class="contact-card">
+            <span>Email</span>
+            <strong>sosungmin03@naver.com</strong>
+          </a>
+
+          <a href="tel:01049094496" class="contact-card">
+            <span>Phone</span>
+            <strong>010-4909-4496</strong>
+          </a>
+
+          <a href="https://github.com/soseongmin03" target="_blank" class="contact-card">
+            <span>Github</span>
+            <strong>github.com/soseongmin03</strong>
+          </a>
+
+          <a href="https://soseongmin03.tistory.com/" target="_blank" class="contact-card">
+            <span>Blog</span>
+            <strong>soseongmin03.tistory.com</strong>
+          </a>
+
+          <a href="https://www.instagram.com/so_seongmin/" target="_blank" class="contact-card">
+            <span>Instagram</span>
+            <strong>@so_seongmin</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 So Seong Min. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
