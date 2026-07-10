@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>지뢰찾기 시작 화면</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="toolbar" aria-label="게임 설정">
+      <nav class="toolbar__levels" aria-label="난이도 선택">
+        <a class="toolbar__level" href="#">쉬움</a>
+        <a class="toolbar__level" href="#">보통</a>
+        <a class="toolbar__level toolbar__level--active" href="#">어려움</a>
+        <a class="toolbar__level" href="#">매우 어려움</a>
+        <a class="toolbar__level" href="#">커스텀</a>
+      </nav>
+
+      <div class="toolbar__actions" aria-label="상단 도구">
+        <button class="control control--select" type="button" aria-label="확대 비율 24">
+          <span aria-hidden="true">🔍</span>
+          <span>24</span>
+          <span aria-hidden="true">⌄</span>
+        </button>
+        <button class="control control--icon" type="button" aria-label="설정">
+          <span aria-hidden="true">⚙</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="game" aria-label="지뢰찾기 게임 시작 화면">
+      <h1 class="visually-hidden">지뢰찾기 게임 시작 화면</h1>
+      <section class="game__panel" aria-label="게임판">
+        <div class="game__status" aria-label="게임 상태">
+          <div class="counter" aria-label="남은 지뢰 수">888</div>
+          <button class="face-button" type="button" aria-label="새 게임">
+            <span class="face-button__icon" aria-hidden="true"></span>
+          </button>
+          <div class="counter" aria-label="경과 시간">888</div>
+        </div>
+
+        <div class="game__board" aria-label="아직 열리지 않은 지뢰찾기 칸">
+          <span class="game__mark" aria-hidden="true">×</span>
+        </div>
+      </section>
+    </main>
+
+    <aside class="quick-tools" aria-label="보조 도구">
+      <button class="quick-tools__button quick-tools__button--free" type="button">
+        <span aria-hidden="true">🪄</span>
+      </button>
+      <button class="quick-tools__button" type="button" aria-label="새로고침">
+        <span aria-hidden="true">↻</span>
+      </button>
+      <button class="quick-tools__button" type="button" aria-label="편집">
+        <span aria-hidden="true">📝</span>
+      </button>
+      <button class="quick-tools__button" type="button" aria-label="저장">
+        <span aria-hidden="true">▣</span>
+      </button>
+    </aside>
+  </div>
+</body>
+</html>
