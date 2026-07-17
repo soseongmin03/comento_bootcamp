@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3주차 알람 시계</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <p class="app__eyebrow">3주차 과제</p>
+      <h1 class="app__title">배터리 알람 시계</h1>
+      <p class="app__description">
+        배터리가 1초마다 1%씩 줄어들고, 설정한 시간에 알람을 알려주는 시계입니다.
+      </p>
+    </header>
+
+    <main class="app__main">
+      <section class="clock-card" aria-labelledby="clock-title">
+        <div class="clock-card__header">
+          <h2 id="clock-title" class="clock-card__title">현재 시간</h2>
+
+          <div class="battery" aria-label="배터리 상태">
+            <div class="battery__case" aria-hidden="true">
+              <div class="battery__level" data-battery-level></div>
+            </div>
+            <strong class="battery__text" data-battery-text>100%</strong>
+          </div>
+        </div>
+
+        <div class="clock-screen" data-clock-screen>
+          <time class="clock-screen__time" data-clock-time datetime="">00:00:00</time>
+          <p class="clock-screen__label" data-clock-label>시계가 동작 중입니다.</p>
+        </div>
+
+        <div class="clock-card__actions">
+          <button class="button button--secondary" type="button" data-charge-button>
+            충전하기
+          </button>
+          <p class="clock-card__hint">추가기능: 배터리를 다시 100%로 충전합니다.</p>
+        </div>
+      </section>
+
+      <section class="alarm-card" aria-labelledby="alarm-title">
+        <div class="alarm-card__header">
+          <h2 id="alarm-title" class="alarm-card__title">알람 설정</h2>
+          <p class="alarm-card__count" data-alarm-count>0 / 3</p>
+        </div>
+
+        <form class="alarm-form" data-alarm-form>
+          <div class="alarm-form__grid">
+            <label class="field">
+              <span class="field__label">시</span>
+              <input class="field__input" type="number" name="hour" min="0" max="23" value="7" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">분</span>
+              <input class="field__input" type="number" name="minute" min="0" max="59" value="0" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">초</span>
+              <input class="field__input" type="number" name="second" min="0" max="59" value="0" required />
+            </label>
+          </div>
+
+          <button class="button button--primary" type="submit">알람 추가</button>
+        </form>
+
+        <div class="alarm-list" aria-live="polite">
+          <h3 class="alarm-list__title">알람 현황</h3>
+          <ul class="alarm-list__items" data-alarm-list></ul>
+          <p class="alarm-list__empty" data-empty-message>등록된 알람이 없습니다.</p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="notice" aria-live="polite" aria-atomic="true">
+      <p class="notice__message" data-status-message>
+        알람을 최대 3개까지 등록할 수 있습니다.
+      </p>
+    </aside>
+  </div>
+</body>
+</html>
