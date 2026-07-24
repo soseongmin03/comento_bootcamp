@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4주차 최종 프로젝트</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <p class="app__eyebrow">4주차 최종 프로젝트</p>
+      <h1 class="app__title">회원가입과 To Do List</h1>
+      <p class="app__description">
+        배열을 이용해 회원 정보를 저장하고, 일정을 추가하거나 삭제할 수 있는 간단한 웹 프로그램입니다.
+      </p>
+    </header>
+
+    <main class="app__main">
+      <section class="panel" aria-labelledby="signup-title">
+        <div class="panel__header">
+          <div>
+            <p class="panel__eyebrow">Sign up</p>
+            <h2 id="signup-title" class="panel__title">회원가입</h2>
+          </div>
+          <strong class="panel__counter" data-member-count>0명</strong>
+        </div>
+
+        <form class="form" data-signup-form novalidate>
+          <label class="field">
+            <span class="field__label">아이디</span>
+            <div class="field__inline">
+              <input
+                class="field__input"
+                type="text"
+                name="userId"
+                placeholder="예: comento01"
+                autocomplete="username"
+                data-user-id-input
+                required
+              />
+              <button class="button button--secondary" type="button" data-check-id-button>
+                중복확인
+              </button>
+            </div>
+            <span class="field__message" data-id-message>아이디를 입력한 뒤 중복확인을 눌러주세요.</span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">이름</span>
+            <input
+              class="field__input"
+              type="text"
+              name="name"
+              placeholder="이름을 입력하세요"
+              autocomplete="name"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span class="field__label">비밀번호</span>
+            <input
+              class="field__input"
+              type="password"
+              name="password"
+              placeholder="8자 이상, 영문/숫자/특수문자 포함"
+              autocomplete="new-password"
+              data-password-input
+              required
+            />
+            <span class="field__message" data-password-message>
+              비밀번호 규칙을 확인합니다.
+            </span>
+          </label>
+
+          <ul class="rule-list" aria-label="비밀번호 규칙">
+            <li data-rule="length">8자 이상</li>
+            <li data-rule="letter">영문 포함</li>
+            <li data-rule="number">숫자 포함</li>
+            <li data-rule="special">특수문자 포함</li>
+            <li data-rule="space">공백 없음</li>
+          </ul>
+
+          <button class="button button--primary" type="submit">회원가입</button>
+        </form>
+
+        <div class="list-box" aria-live="polite">
+          <h3 class="list-box__title">가입 회원</h3>
+          <ul class="member-list" data-member-list></ul>
+          <p class="empty-message" data-member-empty>아직 가입한 회원이 없습니다.</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="todo-title">
+        <div class="panel__header">
+          <div>
+            <p class="panel__eyebrow">To do</p>
+            <h2 id="todo-title" class="panel__title">일정 관리</h2>
+          </div>
+          <strong class="panel__counter" data-todo-count>0개</strong>
+        </div>
+
+        <form class="form" data-todo-form>
+          <label class="field">
+            <span class="field__label">일정 내용</span>
+            <input
+              class="field__input"
+              type="text"
+              name="todoText"
+              placeholder="예: 최종 프로젝트 문서 정리"
+              data-todo-input
+              required
+            />
+          </label>
+          <button class="button button--primary" type="submit">일정 추가</button>
+        </form>
+
+        <div class="list-box" aria-live="polite">
+          <h3 class="list-box__title">일정 목록</h3>
+          <ul class="todo-list" data-todo-list></ul>
+          <p class="empty-message" data-todo-empty>등록된 일정이 없습니다.</p>
+        </div>
+      </section>
+    </main>
+
+    <section class="event-guide" aria-labelledby="event-guide-title">
+      <h2 id="event-guide-title" class="event-guide__title">화면 이벤트 설명</h2>
+      <div class="event-guide__grid">
+        <article class="event-guide__item">
+          <h3>아이디 입력</h3>
+          <p>입력값이 바뀌면 기존 중복확인 결과를 초기화합니다.</p>
+        </article>
+        <article class="event-guide__item">
+          <h3>중복확인 버튼 클릭</h3>
+          <p>회원 배열에서 같은 아이디가 있는지 확인하고 결과 메시지를 표시합니다.</p>
+        </article>
+        <article class="event-guide__item">
+          <h3>비밀번호 입력</h3>
+          <p>길이, 영문, 숫자, 특수문자, 공백 조건을 실시간으로 검사합니다.</p>
+        </article>
+        <article class="event-guide__item">
+          <h3>회원가입 제출</h3>
+          <p>아이디 중복과 비밀번호 규칙을 통과하면 회원 배열에 정보를 저장합니다.</p>
+        </article>
+        <article class="event-guide__item">
+          <h3>일정 추가 제출</h3>
+          <p>입력한 일정을 To Do 배열에 추가하고 화면 목록을 다시 그립니다.</p>
+        </article>
+        <article class="event-guide__item">
+          <h3>삭제 버튼 클릭</h3>
+          <p>선택한 일정을 배열에서 제거하고 남은 일정만 화면에 표시합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="toast" aria-live="polite" aria-atomic="true">
+      <p class="toast__message" data-status-message>
+        회원가입 또는 일정 관리를 진행해 주세요.
+      </p>
+    </aside>
+  </div>
+</body>
+</html>
